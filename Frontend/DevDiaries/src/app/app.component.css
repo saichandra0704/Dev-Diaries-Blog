@@ -1,0 +1,26 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+.toolbar a, .toolbar button {
+  margin-right: 10px;
+}
+
+mat-icon {
+  margin-right: 8px; 
+}
+
+a, button {
+  color: white; 
+  display: flex;
+  align-items: center;
+}
+
+a:hover, button:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+}

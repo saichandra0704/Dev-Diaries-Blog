@@ -1,0 +1,19 @@
+<!-- Inside dashboard.component.html -->
+<div class="posts-container">
+    <div class="post-card" *ngFor="let post of posts">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ post.title }}</mat-card-title>
+          <mat-card-subtitle>Posted by {{ post.username }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ post.content }}</p>
+        </mat-card-content>
+        <mat-card-actions *ngIf="((role == 'admin' || role == 'moderator') || currentUser === post.username)">
+          <button mat-button color="primary" (click)="navigateToEdit(post.id)">Edit</button>
+          <button mat-button color="warn" (click)="deletePost(post.id)">Delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

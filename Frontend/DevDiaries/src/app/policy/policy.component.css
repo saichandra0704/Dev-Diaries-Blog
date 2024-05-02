@@ -1,0 +1,26 @@
+.policy-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f9; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  }
+  
+  .policy-container h1 {
+    color: #333;
+  }
+  
+  .policy-container ul {
+    padding-left: 20px;
+  }
+  
+  .policy-container li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    display: block; 
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+  

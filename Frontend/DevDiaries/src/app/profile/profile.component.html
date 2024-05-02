@@ -1,0 +1,29 @@
+<div class="profile-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSave()">
+        <mat-card-header>
+            <mat-card-title>Profile</mat-card-title>
+          </mat-card-header>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Username" >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="New Password">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Security Question</mat-label>
+        <mat-select formControlName="security_question">
+          <mat-option *ngFor="let question of securityQuestions" [value]="question.value">
+            {{question.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>      
+      <mat-form-field appearance="fill">
+        <mat-label>Security Answer</mat-label>
+        <input matInput formControlName="security_answer" placeholder="Security Answer">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Save Changes</button>
+    </form>
+  </div>
+  

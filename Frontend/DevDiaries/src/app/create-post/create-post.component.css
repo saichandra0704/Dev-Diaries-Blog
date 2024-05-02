@@ -1,0 +1,22 @@
+.create-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+mat-card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+mat-form-field {
+  width: 100%; 
+}
+
+.content-field {
+  min-height: 150px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+}

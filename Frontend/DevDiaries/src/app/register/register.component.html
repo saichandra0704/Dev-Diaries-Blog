@@ -1,0 +1,36 @@
+<div class="registration-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Enter your username">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Enter your password">
+        <button mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Security Question</mat-label>
+        <mat-select formControlName="security_question">
+          <mat-option *ngFor="let question of securityQuestions" [value]="question.value">
+            {{question.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Security Answer</mat-label>
+        <input matInput formControlName="security_answer" placeholder="Enter your security answer">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Register</button>
+    </form>
+  </div>
+  

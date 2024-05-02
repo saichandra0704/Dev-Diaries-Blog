@@ -1,0 +1,17 @@
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .post-card {
+    flex: 0 1 30%; 
+    margin: 10px;
+  }
+  
+  mat-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
